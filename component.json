@@ -1,0 +1,11 @@
+{
+  "id": "lark-mcp-shared",
+  "type": "shared-mcp",
+  "version": "1.0.0",
+  "platforms": ["darwin"],
+  "clients": ["cursor", "codex"],
+  "commands": {"install": "installer/cli.js install", "update": "installer/cli.js update", "doctor": "installer/cli.js doctor", "rollback": "installer/cli.js rollback", "uninstall": "installer/cli.js uninstall"},
+  "auth": {"required": "user-interactive-per-machine", "secretOwner": "official-lark-cli/keychain"},
+  "service": {"label": "com.openai.lark-mcp-shared", "host": "127.0.0.1", "port": 33332, "protocol": "streamable-http"},
+  "repository": "https://github.com/Wayne9701/Lark-MCP-Shared"
+}

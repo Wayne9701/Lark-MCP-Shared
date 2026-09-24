@@ -1,0 +1,1807 @@
+[
+  {
+    "name": "base_user_record_batch_update",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "base_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "table_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "update_records": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string"
+            },
+            "additionalProperties": {}
+          }
+        }
+      },
+      "required": [
+        "base_token",
+        "table_id",
+        "update_records"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "base_user_record_create",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "base_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "table_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fields": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {}
+        }
+      },
+      "required": [
+        "base_token",
+        "table_id",
+        "fields"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "base_user_record_get",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "base_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "table_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "record_id": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "keyword": {
+          "type": "string"
+        },
+        "search_field": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 200
+        }
+      },
+      "required": [
+        "base_token",
+        "table_id"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "base_user_record_list",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "base_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "table_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "record_id": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "keyword": {
+          "type": "string"
+        },
+        "search_field": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 200
+        }
+      },
+      "required": [
+        "base_token",
+        "table_id"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "base_user_record_search",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "base_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "table_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "record_id": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "keyword": {
+          "type": "string"
+        },
+        "search_field": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 200
+        }
+      },
+      "required": [
+        "base_token",
+        "table_id"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "base_user_record_update",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "base_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "table_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "record_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fields": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {}
+        }
+      },
+      "required": [
+        "base_token",
+        "table_id",
+        "record_id",
+        "fields"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "docs_user_create",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "content": {
+          "type": "string"
+        },
+        "doc_format": {
+          "type": "string",
+          "enum": [
+            "xml",
+            "markdown"
+          ]
+        },
+        "parent_token": {
+          "type": "string"
+        },
+        "parent_position": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "docs_user_read",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "doc": {
+          "type": "string",
+          "minLength": 1
+        },
+        "doc_format": {
+          "type": "string",
+          "enum": [
+            "xml",
+            "markdown",
+            "im-markdown"
+          ]
+        },
+        "detail": {
+          "type": "string",
+          "enum": [
+            "simple",
+            "with-ids",
+            "full"
+          ]
+        }
+      },
+      "required": [
+        "doc"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "docs_user_update",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "doc": {
+          "type": "string",
+          "minLength": 1
+        },
+        "command": {
+          "type": "string",
+          "enum": [
+            "str_replace",
+            "block_delete",
+            "block_insert_after",
+            "block_copy_insert_after",
+            "block_replace",
+            "block_move_after",
+            "overwrite",
+            "append"
+          ]
+        },
+        "content": {
+          "type": "string"
+        },
+        "pattern": {
+          "type": "string"
+        },
+        "block_id": {
+          "type": "string"
+        },
+        "revision_id": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "doc_format": {
+          "type": "string",
+          "enum": [
+            "xml",
+            "markdown"
+          ]
+        }
+      },
+      "required": [
+        "doc",
+        "command"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "drive_user_copy",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "folder_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "folder_token"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "drive_user_inspect",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "url"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "drive_user_move",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "file_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "folder_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "file_token",
+        "folder_token",
+        "type"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "drive_user_rename",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "drive_user_search",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "maxLength": 30
+        },
+        "doc_types": {
+          "type": "string"
+        },
+        "page_size": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "page_token": {
+          "type": "string"
+        },
+        "sort": {
+          "type": "string"
+        }
+      },
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "im_user_auth_start",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    }
+  },
+  {
+    "name": "im_user_auth_status",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    }
+  },
+  {
+    "name": "im_user_chat_list",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "page_all": {
+          "type": "boolean"
+        },
+        "page_limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "page_size": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "page_token": {
+          "type": "string"
+        },
+        "sort": {
+          "type": "string",
+          "enum": [
+            "create_time",
+            "active_time"
+          ]
+        },
+        "exclude_muted": {
+          "type": "boolean"
+        }
+      },
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    }
+  },
+  {
+    "name": "im_user_chat_messages_list",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "chat_id": {
+          "type": "string"
+        },
+        "user_id": {
+          "type": "string"
+        },
+        "start": {
+          "type": "string"
+        },
+        "end": {
+          "type": "string"
+        },
+        "order": {
+          "type": "string",
+          "enum": [
+            "asc",
+            "desc"
+          ]
+        },
+        "page_all": {
+          "type": "boolean"
+        },
+        "page_limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "page_size": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50
+        },
+        "page_token": {
+          "type": "string"
+        }
+      },
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    }
+  },
+  {
+    "name": "im_user_message_reply",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "markdown": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "idempotency_key": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 50
+        },
+        "message_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reply_in_thread": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "idempotency_key",
+        "message_id"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": true,
+      "idempotentHint": false,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "im_user_message_send",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "markdown": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "idempotency_key": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 50
+        },
+        "chat_id": {
+          "type": "string"
+        },
+        "user_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "idempotency_key"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": true,
+      "idempotentHint": false,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "im_user_messages_search",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "sender": {
+          "type": "string"
+        },
+        "chat_id": {
+          "type": "string"
+        },
+        "chat_type": {
+          "type": "string",
+          "enum": [
+            "group",
+            "p2p"
+          ]
+        },
+        "start": {
+          "type": "string"
+        },
+        "end": {
+          "type": "string"
+        },
+        "page_all": {
+          "type": "boolean"
+        },
+        "page_limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 40
+        },
+        "page_size": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50
+        },
+        "page_token": {
+          "type": "string"
+        }
+      },
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    }
+  },
+  {
+    "name": "im_user_thread_messages_list",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "thread": {
+          "type": "string",
+          "minLength": 1
+        },
+        "order": {
+          "type": "string",
+          "enum": [
+            "asc",
+            "desc"
+          ]
+        },
+        "page_all": {
+          "type": "boolean"
+        },
+        "page_limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "page_size": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50
+        },
+        "page_token": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "thread"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    }
+  },
+  {
+    "name": "lark_capability_get",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "capability_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "capability_id"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "lark_capability_high_impact",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "capability_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "argv": {
+          "maxItems": 200,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 200000
+          }
+        },
+        "precondition": {
+          "type": "object",
+          "properties": {
+            "capability_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "argv": {
+              "maxItems": 200,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 200000
+              }
+            }
+          },
+          "required": [
+            "capability_id",
+            "argv"
+          ]
+        },
+        "verify": {
+          "type": "object",
+          "properties": {
+            "capability_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "argv": {
+              "maxItems": 200,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 200000
+              }
+            }
+          },
+          "required": [
+            "capability_id",
+            "argv"
+          ]
+        }
+      },
+      "required": [
+        "capability_id",
+        "argv",
+        "verify"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": true,
+      "idempotentHint": false,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "lark_capability_list",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "type": "string",
+          "enum": [
+            "docs",
+            "sheets",
+            "base",
+            "drive",
+            "wiki",
+            "im",
+            "permissions"
+          ]
+        },
+        "operation": {
+          "type": "string",
+          "enum": [
+            "read",
+            "write",
+            "destructive",
+            "external_send",
+            "permission"
+          ]
+        }
+      },
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "lark_capability_read",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "capability_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "argv": {
+          "maxItems": 200,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 200000
+          }
+        }
+      },
+      "required": [
+        "capability_id",
+        "argv"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "lark_capability_write",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "capability_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "argv": {
+          "maxItems": 200,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 200000
+          }
+        },
+        "precondition": {
+          "type": "object",
+          "properties": {
+            "capability_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "argv": {
+              "maxItems": 200,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 200000
+              }
+            }
+          },
+          "required": [
+            "capability_id",
+            "argv"
+          ]
+        },
+        "verify": {
+          "type": "object",
+          "properties": {
+            "capability_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "argv": {
+              "maxItems": 200,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 200000
+              }
+            }
+          },
+          "required": [
+            "capability_id",
+            "argv"
+          ]
+        }
+      },
+      "required": [
+        "capability_id",
+        "argv",
+        "verify"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "lark_user_auth_start",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "lark_user_auth_status",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "sheets_user_batch_update",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "spreadsheet_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "writes": {
+          "minItems": 1,
+          "maxItems": 100,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "sheet_id": {
+                "type": "string"
+              },
+              "sheet_name": {
+                "type": "string"
+              },
+              "range": {
+                "type": "string",
+                "minLength": 1
+              },
+              "cells": {
+                "minItems": 1,
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "propertyNames": {
+                      "type": "string"
+                    },
+                    "additionalProperties": {}
+                  }
+                }
+              }
+            },
+            "required": [
+              "range",
+              "cells"
+            ]
+          }
+        }
+      },
+      "required": [
+        "writes"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "sheets_user_cells_clear",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "spreadsheet_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "sheet_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sheet_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "range": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "scope": {
+          "type": "string",
+          "enum": [
+            "content",
+            "formats",
+            "all"
+          ]
+        }
+      },
+      "required": [
+        "range"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": true,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "sheets_user_cells_get",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "spreadsheet_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "sheet_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sheet_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "range": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "include": {
+          "maxItems": 7,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "value",
+              "formula",
+              "style",
+              "comment",
+              "data_validation",
+              "conditional_format",
+              "truncation"
+            ]
+          }
+        },
+        "skip_hidden": {
+          "type": "boolean"
+        },
+        "max_chars": {
+          "type": "integer",
+          "minimum": 1000,
+          "maximum": 500000
+        }
+      },
+      "required": [
+        "range"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    }
+  },
+  {
+    "name": "sheets_user_cells_set",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "spreadsheet_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "sheet_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sheet_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "range": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "cells": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {}
+            }
+          }
+        },
+        "allow_overwrite": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "range",
+        "cells"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "sheets_user_csv_get",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "spreadsheet_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "sheet_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sheet_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "range": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "skip_hidden": {
+          "type": "boolean"
+        },
+        "max_chars": {
+          "type": "integer",
+          "minimum": 1000,
+          "maximum": 500000
+        }
+      },
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    }
+  },
+  {
+    "name": "sheets_user_dim_insert",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "spreadsheet_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "sheet_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sheet_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "position": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            }
+          ]
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "inherit_style": {
+          "type": "string",
+          "enum": [
+            "before",
+            "after"
+          ]
+        }
+      },
+      "required": [
+        "position",
+        "count"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "sheets_user_freeze_set",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "spreadsheet_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "sheet_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sheet_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rows": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000
+        },
+        "cols": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000
+        }
+      },
+      "required": [
+        "rows",
+        "cols"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "sheets_user_sheet_copy",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "spreadsheet_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "sheet_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sheet_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "index": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        }
+      },
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "sheets_user_sheet_create",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "spreadsheet_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "index": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "row_count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50000
+        },
+        "col_count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 200
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "sheets_user_sheet_rename",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "spreadsheet_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "sheet_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sheet_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "sheets_user_style_set",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "spreadsheet_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "sheet_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sheet_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "range": {
+          "type": "string",
+          "minLength": 1
+        },
+        "style": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {}
+        }
+      },
+      "required": [
+        "range",
+        "style"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "sheets_user_table_get",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "spreadsheet_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "sheet_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sheet_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "range": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "no_header": {
+          "type": "boolean"
+        },
+        "max_chars": {
+          "type": "integer",
+          "minimum": 1000,
+          "maximum": 500000
+        }
+      },
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    }
+  },
+  {
+    "name": "sheets_user_validation_set",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "spreadsheet_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "sheet_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sheet_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "range": {
+          "type": "string",
+          "minLength": 1
+        },
+        "options": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_range": {
+          "type": "string",
+          "minLength": 1
+        },
+        "multiple": {
+          "type": "boolean"
+        },
+        "highlight": {
+          "type": "boolean"
+        },
+        "colors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "range"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "sheets_user_workbook_info",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "spreadsheet_token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    }
+  },
+  {
+    "name": "wiki_user_node_create",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "wiki_user_node_get",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "wiki_user_node_list",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "wiki_user_node_move",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "wiki_user_node_rename",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "url",
+        "title"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    }
+  }
+]

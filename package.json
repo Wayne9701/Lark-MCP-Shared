@@ -1,0 +1,20 @@
+{
+  "name": "lark-mcp-shared",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portable CLI-native Lark semantic MCP service for macOS",
+  "license": "Apache-2.0",
+  "engines": { "node": ">=22" },
+  "bin": { "lark-mcp-shared": "installer/cli.js" },
+  "scripts": {
+    "test": "node --test shared-lark-cli-user.test.js tests/*.test.js",
+    "test:portability": "node --test tests/portability.test.js",
+    "test:isolated-install": "node scripts/isolated-install-smoke.js",
+    "scan": "node scripts/public-scan.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.28.0",
+    "express": "5.2.1",
+    "zod": "4.3.6"
+  }
+}
